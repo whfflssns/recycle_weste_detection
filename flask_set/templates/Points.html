@@ -1,0 +1,111 @@
+<!--재활용을 어디에 버릴 지 알려주는 화살표 HTML Code-->
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>테스트용</title>
+    </head>
+    <script type="text/javascript">
+
+    	var pl_active = "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FIybNh%2FbtriJndX8Dk%2FaCNckSkheMPhKkgfYomyPk%2Fimg.png";
+        var pl_unactive = "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FyCGbW%2FbtriO1VrAoL%2FCuXPa9C7CLWDmn23jOktqk%2Fimg.png";
+        var pp_active = "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbJp1c1%2FbtriSksWORB%2FOB3pf1emM4RY6zUocMTSm1%2Fimg.png";
+        var pp_unactive = "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FyCGbW%2FbtriO1VrAoL%2FCuXPa9C7CLWDmn23jOktqk%2Fimg.png";
+        var mt_active = "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FOk25C%2FbtriMJ1OEju%2FOGXmlOWzT9rTbqWjw9e09K%2Fimg.png";
+        var mt_unactive = "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FSQtqE%2FbtriTw7KpNS%2FxC9dmhT0F2LOlA66p9i32K%2Fimg.png";
+        var gl_active = "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdVM1WF%2FbtriQ54lLbo%2FCHKHzodiC2JXAsTOLNp7d1%2Fimg.png";
+        var gl_unactive = "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmzG3k%2FbtriO1Bbyjm%2FxqyvzaRV21kKVyxck7ean1%2Fimg.png";
+        var nr_active = "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F1v5aH%2FbtriJtELxbm%2FUm4vELNkLAwQfvyMxoz5Wk%2Fimg.png";
+        var nr_unactive = "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FMrnEj%2FbtriGVO0X8u%2FmNk7qPVuAlnDFjTeUdYrak%2Fimg.png";
+
+    	function f(e){
+
+    		var text = prompt("데이터 종류를 입력하세요 (pl,pp,gl,mt,nr,reset)");
+
+
+    		if(text == "pl"){
+                document.getElementById("txt").innerText = "플라스틱";
+                document.getElementById("pl").src = pl_active;
+    			document.getElementById("nr").src = nr_unactive;
+		    	document.getElementById("gl").src = gl_unactive;
+		    	document.getElementById("mt").src = mt_unactive;
+		    	document.getElementById("pp").src = pp_unactive;
+    		}
+    		else if(text == "pp"){
+                document.getElementById("txt").innerText = "종이";
+    			document.getElementById("pl").src = pl_unactive;
+                document.getElementById("nr").src = nr_unactive;
+                document.getElementById("gl").src = gl_unactive;
+                document.getElementById("mt").src = mt_unactive;
+                document.getElementById("pp").src = pp_active;
+    		}
+    		else if(text == "mt"){
+                document.getElementById("txt").innerText = "금속";
+    			document.getElementById("pl").src = pl_unactive;
+                document.getElementById("nr").src = nr_unactive;
+                document.getElementById("gl").src = gl_unactive;
+                document.getElementById("mt").src = mt_active;
+                document.getElementById("pp").src = pp_unactive;
+    		}
+    		else if(text == "nr"){
+                document.getElementById("txt").innerText = "일반쓰레기";
+    			document.getElementById("pl").src = pl_unactive;
+                document.getElementById("nr").src = nr_active;
+                document.getElementById("gl").src = gl_unactive;
+                document.getElementById("mt").src = mt_unactive;
+                document.getElementById("pp").src = pp_unactive;
+    		}
+    		else if(text == "gl"){
+                document.getElementById("txt").innerText = "유리";
+    			document.getElementById("pl").src = pl_unactive;
+                document.getElementById("nr").src = nr_unactive;
+                document.getElementById("gl").src = gl_active;
+                document.getElementById("mt").src = mt_unactive;
+                document.getElementById("pp").src = pp_unactive;
+    		}
+    		else if(text == "reset"){
+                document.getElementById("txt").innerText = "초기화";
+    			document.getElementById("pl").src = pl_unactive;
+                document.getElementById("nr").src = nr_unactive;
+                document.getElementById("gl").src = gl_unactive;
+                document.getElementById("mt").src = mt_unactive;
+                document.getElementById("pp").src = pp_unactive;
+    		}
+    		else{
+    			alert("데이터를 잘못 입력했습니다.");
+    		}
+    	}
+
+
+
+
+
+    </script>
+    <body>
+    	<button onclick="f(event)">데이터 입력</button>
+    	
+    	<!--<button onclick="f(event)">플라스틱</button>
+    	<button onclick="f(event)">유리</button>
+    	<button onclick="f(event)">금속</button>
+    	<button onclick="f(event)">종이</button>-->
+    	<div>
+    		<table width="500" border="1">
+    			<thead></thead>
+    			<tbody align="center">
+    				<tr height="100"><td colspan="5"><p id="txt">초기상태</p></td></tr>
+    				<tr height="100">
+    					<td><img width="60" height="70" src = "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FyCGbW%2FbtriO1VrAoL%2FCuXPa9C7CLWDmn23jOktqk%2Fimg.png" alt = "플라스틱" id = "pl"></img></td>
+    					<td><img width="60" height="70" src = "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FSQtqE%2FbtriTw7KpNS%2FxC9dmhT0F2LOlA66p9i32K%2Fimg.png" alt = "금속" id = "mt"></td>
+    					<td><img width="60" height="70" src = "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmzG3k%2FbtriO1Bbyjm%2FxqyvzaRV21kKVyxck7ean1%2Fimg.png" alt = "유리" id = "gl"></td>
+    					<td><img width="60" height="70" src = "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FMrnEj%2FbtriGVO0X8u%2FmNk7qPVuAlnDFjTeUdYrak%2Fimg.png" alt = "일반쓰레기" id = "nr"></td>
+    					<td><img width="60" height="70" src = "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FyCGbW%2FbtriO1VrAoL%2FCuXPa9C7CLWDmn23jOktqk%2Fimg.png" alt = "종이" id = "pp"></img></td>
+    				</tr>
+    			</tbody>
+    			<tfoot></tfoot>
+    		</table>
+    	</div>
+
+    </body>
+</html>
+
+

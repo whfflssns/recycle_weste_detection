@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="kr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src = {{url_for('static', filename="main.js")}}></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="./../static/exam.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Live Streaming Demonstration</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8  offset-lg-2">
+            <h3 class="mt-5">Live Streaming</h3>
+            <img id=bg src="{{ url_for('video_feed') }}" width="100%">
+        </div>
+        <div class="col-md">
+            <table>
+                <th style="text-align:center;">결과 값</th>
+                <tr id = "label"></tr>
+            </table>
+        </div>
+    </div>
+        <div class="sspace"></div>
+    <div class="row">
+        <div class="col">
+            <table id = "show_tbl">
+            <tbody>
+                <tr>
+                	<td class = "in pl">플라스틱</td>
+                	<td class = "space"></td> <!--가로 여백 임의로 마련-->
+                	<td class = "in gl">유리</td>
+                	<td class = "space"></td>
+                	<td class = "in nr">일반쓰레기</td>
+                	<td class = "space"></td>
+                	<td class = "in mt">고철</td>
+                	<td class = "space"></td>
+                	<td class = "in pp">종이</td>
+                </tr>
+                <tr class = "vspace"></tr> <!--세로 여백 임의로 마련-->
+                <tr height = "50px">
+                	<td id="pl"><div id = "triangle_pl"></div></td>
+                	<td class = "space"></td>
+                	<td id="gl"><div id = "triangle_gl"></div></td>
+                	<td class = "space"></td>
+                	<td id="nr"><div id = "triangle_nr"></div></td>
+                	<td class = "space"></td>
+                	<td id="mt"><div id = "triangle_mt"></div></td>
+                	<td class = "space"></td>
+                	<td id="pp"><div id = "triangle_pp"></div></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
